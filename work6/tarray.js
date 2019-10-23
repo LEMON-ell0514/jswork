@@ -7,4 +7,4 @@ for(var i in arr){
     ++index; 
     }
 }
-document.getElementById('transArry').innerHTML = newArr.toString()
+document.getElementById('transArray').innerHTML = newArr.toString()
