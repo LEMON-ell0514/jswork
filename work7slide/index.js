@@ -8,8 +8,7 @@ function sort(method){
         logs = insertSort(origin)
     }
     showDiv = document.getElementById('Anim')
-     //生成排序日志数组的遍历器对象
-     logValues = log.values()
+    logValues = logs.values()
     console.log(logValues.next())
     setTimeout("showLog(logValues,showDiv)", 50)
 }
