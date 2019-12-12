@@ -34,15 +34,15 @@
 
 .cart-item {
     background-color: #FAFCFF;
-    border-bottom: 1px dotted #84B3FD;  
+    border-bottom: 1px dotted #84B3FD;
 }
 
-cart-item td {
+.cart-item td {
     height: 55px;
     text-align: center;
 }
 
-.cart-item .cart-text-left {
+.cart-item .cart-txt-left {
     text-align: left;
 }
 
@@ -52,7 +52,7 @@ cart-item td {
 }
 
 .cart-subtotal {
-    color: DD3334;
+    color: #FF3334;
     font-weight: bold;
 }
 
@@ -80,33 +80,35 @@ cart-item td {
     margin: 5px;
     width: 35px;
     text-align: center;
-    height:20px;
+    height: 20px;
     line-height: 20px;
     padding: 0 3px;
     display: inline-block;
     background: #fff;
-    border: 1px solid #bbb
+    border: 1px solid #bbb;
 }
 
 .cart-del,
-.cart-all {
+.cart-all,
+.cart-unall {
     color: #3366D4;
 }
 
 .cart-del:hover,
-.cart-all:hover {
+.cart-all:hover,
+.cart-unall:hover {
     text-decoration: underline;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .cart-bottom {
     height: 55px;
-    text-align: right
+    text-align: right;
 }
 
 .cart-bottom .cart-all {
     position: relative;
-    top: 1px
+    top: 1px;
 }
 
 .cart-total-price {
@@ -118,11 +120,11 @@ cart-item td {
 .cart-bottom-btn {
     color: #FFF;
     font-size: 14px;
-    font-weight:600;
+    font-weight: 600;
     cursor: pointer;
     margin: 0 20px;
     background: #FE8502;
-    border: 1px solid #ff6633;
+    border: 1px solid #FF6633;
     border-radius: 5px 5px 5px 5px;
     padding: 6px 12px;
 }
