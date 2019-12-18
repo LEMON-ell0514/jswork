@@ -1,29 +1,33 @@
 function $(id) {
     return document.getElementById(id);
 }
-$('smallBox').onmouseout = function () {
+$('smallBox').onmouseover = function () {
     $('mask').style.display = 'block';
     $('bigBox').style.display = 'block';
-}
+};
+$('smallBox').onmouseout = function () {
+    $('mask').style.display = 'none';
+    $('bigBox').style.display = 'none';
+};
 $('smallBox').onmousemove = function (event) {
     var event = event || window.event;
     var pageX = event.pageX || event.clientX + document.documentElement.scrollLeft;
     var pageY = event.pageY || event.clientY + document.documentElement.scrollTop;
     var boxX = pageX - $('box').offsetLeft;
     var boxY = pageY - $('box').offsetTop;
-    var maskX = boxX - $('mask').offsetWidth / 2;
-    var maskY = boxY - $('mask').offsetHeight / 2;
-    if (mask < 0) {
-        mask = 0;
+    var maskX = boxX - $('mask').offsetWidth /2;
+    var maskY = boxY - $('mask').offsetHeight /2;
+    if (maskX < 0 ) {
+        maskX = 0 ;
     }
-    if (maskX > $('smallBox').offsetWidth - $('mask').offsetWidth){
+    if (maskX > $('smallBox').offsetWidth - $('mask').offsetWidth) {
         maskX = $('smallBox').offsetWidth - $('mask').offsetWidth;
     }
-    if (mask < 0) {
-        mask = 0;
+    if (maskY < 0 ) {
+        maskY = 0 ;
     }
-    if (mask > $('smallBox').offsetHeight - $('mask').offsetHeight){
-        mask = $('smallBox').offsetHeight - $('mask').offsetHeight;
+    if (maskY > $('smallBox').offsetHeight - $('mask').offsetHeight) {
+        maskY = $('smallBox').offsetHeight - $('mask').offsetHeight;
     }
     $('mask').style.left = maskX + 'px';
     $('mask').style.top = maskY + 'px';
